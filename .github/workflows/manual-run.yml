@@ -2,6 +2,7 @@ name: Manual run
 
 on:
   workflow_dispatch:
+  pull_request:
 
 jobs:
   check-dist:
@@ -20,3 +21,4 @@ jobs:
           name: JEST Tests
           path: __tests__/__results__/*.xml
           reporter: jest-junit
+          use-actions-summary: false
